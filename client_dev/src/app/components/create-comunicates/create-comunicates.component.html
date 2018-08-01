@@ -1,0 +1,51 @@
+<logo></logo>
+<div class="contenedorForm">
+
+	<h2>{{titulo}}</h2>
+
+	<div class="message success" *ngIf="status == 'success'">
+	   El comunicado se ha creado correctamente, puedes <a [routerLink]="['/comunicado',save_comunicate._id]">verlo   aqui</a>
+	</div>
+	<div class="message failed" *ngIf="status == 'failed'">
+	    No se ha podido guardar la propiedad de conocenos
+	</div>
+	<form #comunicateForm="ngForm"  (ngSubmit)= "onSubmit(comunicateForm)" >
+		<p>
+			<label for="date_comunicate">Fecha   {{today}}</label>
+			
+		</p>
+		<p>
+			<label for="title_comunicate">Titulo</label>
+			<input type="text" name="title_comunicate" #title_comunicate ="ngModel" [(ngModel)]="comunicate.title_comunicate"  required>
+			<br>
+			<span class="form_error" *ngIf="title_comunicate.touched && !title_comunicate.valid">
+				El titulo es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="description_comunicate">Descripción</label>
+			<input type="text" name="description_comunicate" #description_comunicate ="ngModel" [(ngModel)]="comunicate.description_comunicate" required>
+			<br>
+			<span class="form_error" *ngIf="description_comunicate.touched && !description_comunicate.valid">
+				La descripción es obligatoria
+			</span>
+		</p>
+		<p>
+			<label for="image">Imagen</label>
+			<input type="file" name="image" #image ="ngModel" [(ngModel)]="comunicate.image" (change)="fileChangeEvent($event)" required>
+			<br>
+			<span class="form_error" *ngIf="image.touched && !image.valid">
+				La imagen es obligatoria
+			</span>
+		</p>
+		
+		<input type="submit" value="Ingresar" [disabled]="!comunicateForm.form.valid">
+	</form>	
+
+
+
+
+</div>
+
+
+

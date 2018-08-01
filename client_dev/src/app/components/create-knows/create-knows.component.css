@@ -1,0 +1,29 @@
+.form-group{
+	width: 100%;
+	margin-right:50%;
+	margin-left: 50%;
+
+	padding-bottom: 20px;
+}
+
+label {
+	font-size: 15px;
+	color: black;
+}
+
+
+span {
+	display: block;
+	font-size: 14px;
+	color: red;	
+	
+}
+@media (max-width:600px) {
+	.form-group{
+		width: 100%;
+		margin:auto;
+	}
+	
+
+	}
+

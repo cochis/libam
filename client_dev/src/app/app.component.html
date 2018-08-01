@@ -1,0 +1,94 @@
+ <div class="margin-center">
+  <!--Navigation bar-->
+ 
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" [routerLink]="['/']" [routerLinkActive]="['actived']">LIBAM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav navbar-right"  >
+    
+      <li class="nav-item dropdown" *ngIf="!identity">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="['/nosotros']" [routerLinkActive]="['actived']"  >
+          Nosotros
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item"  [routerLink]="['/plantilla']" [routerLinkActive]="['actived']">Plantilla escolar</a>
+          <a class="dropdown-item" *ngIf="activePage == true" [routerLink]="['/comunicados']" [routerLinkActive]="['actived']" >Comunicados a padres</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" *ngIf="!identity">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" [routerLink]="['/oferta']" [routerLinkActive]="['actived']"  >
+          Oferta Educativa
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" [routerLink]="['/actividades']" [routerLinkActive]="['actived']">Actividades Complementarias</a>
+          <a class="nav-link" [routerLink]="['/servicios']" [routerLinkActive]="['actived']">Servicios</a>
+          
+        </div>
+      </li>
+            
+      <li class="nav-item" *ngIf="!identity">
+        <a class="nav-link" *ngIf="activePage == true" [routerLink]="['/becas']" [routerLinkActive]="['actived']">Becas</a>
+      </li>
+     
+      <li class="nav-item" *ngIf="!identity">
+        <a class="nav-link" *ngIf="activePage == true" [routerLink]="['/inscripciones']" [routerLinkActive]="['actived']">Inscripciones</a>
+      </li>
+      <li class="nav-item" *ngIf="!identity">
+        <a class="nav-link" [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a>
+      </li>
+       <li class="nav-item" *ngIf="!identity">
+        <a class="nav-link" [routerLink]="['/login']" [routerLinkActive]="['actived']">Login</a>
+      </li>
+
+      
+      <li class="nav-item dropdown" *ngIf="identity">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
+          ADMIN
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="nav-link" [routerLink]="['/crear-comunicados']" [routerLinkActive]="['actived']">Crear comunicados</a>
+          
+          
+        </div>
+      </li>
+            
+      
+     
+     
+      
+
+    </ul>
+
+    
+    
+  </div>
+
+  <ul class="nav navbar-nav navbar-right" *ngIf="identity" >
+    
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" [routerLinkActive]="['actived']"  >
+          {{identity.name}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          
+          
+          <a class="dropdown-item " href="#" [routerLinkActive]="['actived']" (click)="logout()" >Cerrar Sesion</a>
+        </div>
+      </li>
+
+    </ul>
+</nav>
+   
+
+ 
+<router-outlet></router-outlet>  
+  <foot></foot>
+   
+ </div>
+
+ 

@@ -1,0 +1,42 @@
+.feature-info {
+	
+	margin: auto;
+}
+
+h3{
+	text-align: center;
+	margin:auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+.info{
+	margin-left: 15%;
+	margin-right: 15%;
+	border-radius: 60px 10px 60px 0px;
+-moz-border-radius: 60px 10px 60px 0px;
+-webkit-border-radius: 60px 10px 60px 0px;
+border: 1px solid #ccc;
+ box-shadow: 10px 10px 5px grey;
+
+ color: white;
+
+}
+
+.info p, ul{
+	padding: 20px;
+	text-align: justify;
+
+}
+
+
+
+#info1 {
+	 background: rgba(28,137,66,0.6);
+	
+} 
+
+
+#info2 {
+	 background: rgba(186,157,48,0.6);
+}

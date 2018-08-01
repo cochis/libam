@@ -1,0 +1,28 @@
+{
+  "name": "libam-back_end",
+  "version": "1.0.0",
+  "description": "Back-end para el Colegio Libertadores de America",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Oscar Alejandro Ramirez Rosas",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.6.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.1.1",
+    "email-templates": "^4.0.1",
+    "express": "^4.16.3",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.4",
+    "mongoose-pagination": "^1.0.0",
+    "nodemailer": "^4.6.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}

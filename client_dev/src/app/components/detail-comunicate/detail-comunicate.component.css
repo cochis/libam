@@ -1,0 +1,26 @@
+.contenedor {
+
+	width: 80%;
+	margin:auto;
+
+	text-align:center;
+
+	padding-bottom: 30px;
+}
+.contenedor img{
+
+	padding-top: 50px;
+	display: block;
+	max-width: 800px;
+	margin-left:  auto !important;
+	margin-right:   auto !important;
+	
+}
+
+.delete {
+	z-index: 100%;
+	background: red;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}

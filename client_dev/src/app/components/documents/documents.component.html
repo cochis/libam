@@ -1,0 +1,47 @@
+<section id="feature" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center title">
+          <h2>Documentos</h2>
+          <p>Documentos para descargar.
+          </p>
+          <hr class="bottom-line">
+        </div>
+        <div class="feature-info title">
+          <div class="fea">
+            <div class="col-md-16 ">
+              
+              <div class="contenedor">
+             
+                <ul>
+
+                  <li *ngFor="let document of document" class="document">
+                    <a (click)="getDown(document.document_file)" download="document.document_file">
+
+                      {{document.document_file}}
+                      <h3>{{document.title}}</h3>
+                      <span>{{document.date}}</span>
+                      <p>{{document.description}}</p>
+
+                      <p></p>
+                      <div class="image">
+                       <img src="../../../assets/img/l_100.png" alt="">
+                      </div>
+                    </a>
+                    
+                  </li>
+                </ul>
+              </div>
+
+ 
+
+
+              
+            </div>
+          </div>
+          
+         
+        </div>
+      </div>
+    </div>
+  </section>

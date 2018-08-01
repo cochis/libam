@@ -1,0 +1,12 @@
+<div class="contenedor">
+	
+	<br><br>
+	<img src="{{url}}comunicados/get-image-comunicate/{{comunicate.image}}" > <br>
+	<span>{{comunicate.date_comunicate}}</span>
+	<h2>{{comunicate.title_comunicate}}</h2>
+	<h3>{{comunicate.description_comunicate}}</h3>
+	<p>
+    	<a class="delete" (click)="deleteComunicate(comunicate._id)" *ngIf="identity">Borrar</a> 
+    </p>
+	
+</div>

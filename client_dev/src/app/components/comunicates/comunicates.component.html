@@ -1,0 +1,46 @@
+<section id="feature" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="header-section text-center title">
+
+          <h2>Comunicados</h2>
+          <p>A nuestra comunicadad estudiantil.
+          </p>
+          <hr class="bottom-line">
+        </div>
+        <div class="feature-info title">
+          <div class="fea">
+            <div class="col-md-16 ">
+              
+              <div class="contenedor">
+             
+                <ul>
+                  <li *ngFor="let comunicates of comunicates" class="comunicate">
+                    <a [routerLink]="['/comunicado',comunicates._id]">
+
+                  
+                      <h3>{{comunicates.title_comunicate}}</h3>
+                      <span>{{comunicates.date_comunicate}}</span>
+                      <p>{{comunicates.description_comunicate}}</p>
+                      <div class="image" >
+                        <img class="comunicate-img" src="{{url}}comunicados/get-image-comunicate/{{comunicates.image}}" >  
+                      </div>
+
+                    </a>
+                    
+                     
+                  </li>
+                </ul>
+              </div>
+
+ 
+
+              
+            </div>
+          </div>
+          
+         
+        </div>
+      </div>
+    </div>
+  </section>
