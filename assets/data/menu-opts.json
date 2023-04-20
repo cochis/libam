@@ -1,0 +1,58 @@
+[{
+        "icon": "school",
+        "name": "Inicio",
+        "redirectTo": "/home",
+        "type": "general",
+        "activated": true
+    },
+    {
+        "icon": "school",
+        "name": "Inicio",
+        "redirectTo": "/home",
+        "type": "site",
+        "activated": true
+    },
+    {
+        "icon": "ribbon",
+        "name": "Conocenos",
+        "redirectTo": "/conocenos",
+        "type": "general",
+        "activated": true
+    },
+    {
+        "icon": "book",
+        "name": "Oferta",
+        "redirectTo": "/oferta",
+        "type": "general",
+        "activated": true
+    },
+    {
+        "icon": "mail",
+        "name": "Contacto",
+        "redirectTo": "/contacto",
+        "type": "general",
+        "activated": true
+    },
+
+    {
+        "icon": "accessibility",
+        "name": "Intranet",
+        "redirectTo": "/site/login",
+        "type": "general",
+        "activated": false
+    },
+    {
+        "icon": "accessibility",
+        "name": "Site3",
+        "redirectTo": "/site/loginSite",
+        "type": "site",
+        "activated": false
+    },
+    {
+        "icon": "accessibility",
+        "name": "Site4",
+        "redirectTo": "/site/loginSite",
+        "type": "site",
+        "activated": false
+    }
+]
